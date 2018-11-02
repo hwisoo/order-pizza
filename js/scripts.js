@@ -75,11 +75,11 @@ function displayPizzaDetails(pizzaToDisplay){
     if(pizza.meats.length == 0 && pizza.veggies.length == 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + " Pizza" + "</li>";
     } else if(pizza.meats.length > 0 && pizza.veggies.length == 0){
-      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" + "</li>";
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meats` +"</li>";
     } else if (pizza.veggies.length > 0 && pizza.meats.length == 0){
-      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.veggies[0]+ " Pizza" + "</li>";
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.veggies[0]+ " Pizza" + `, ${pizza.veggies.length} Veggies` +"</li>";
     } else if (pizza.veggies.length > 0 && pizza.meats.length > 0){
-      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " " +pizza.veggies[0]+ " Pizza" + "</li>";
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " " +pizza.veggies[0]+ " Pizza" +`, ${pizza.meats.length} Meats` + `, ${pizza.veggies.length} Veggies` + "</li>";
     }
   });
   pizzaList.html(htmlForPizzaInfo);
