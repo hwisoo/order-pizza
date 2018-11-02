@@ -11,7 +11,7 @@
   <title>Order Pizza</title>
 </head>
 <body>
-  <h1 class="bg-danger text-white text-center p-4">Order Pizza</h1>
+  <h1 class="bg-danger text-white text-center p-4">Order Pizza<img src="img/pizza.jpg" alt="pizza"></h1> 
 
   <div class="container">
     
@@ -20,49 +20,49 @@
             <fieldset>
                 <label>Choose your Meats: </label>
                 <div>
-                  <input type="checkbox" id="pepperoni" name="meats" value="pepperoni">
+                  <input type="checkbox" id="pepperoni" name="meats" value="Pepperoni">
                   <label for="pepperoni">Pepperoni</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="sausage" name="meats" value="sausage">
+                  <input type="checkbox" id="sausage" name="meats" value="Sausage">
                   <label for="sausage">Sausage</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="bacon" name="meats" value="bacon">
+                  <input type="checkbox" id="bacon" name="meats" value="Bacon">
                   <label for="bacon">Bacon</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="chicken" name="meats" value="chicken">
+                  <input type="checkbox" id="chicken" name="meats" value="Chicken">
                   <label for="chicken">Grilled Chicken</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="beef" name="meats" value="beef">
+                  <input type="checkbox" id="beef" name="meats" value="Beef">
                   <label for="beef">Beef</label>
                 </div>
               </fieldset>
             </div>
 
           <div class="col col-md-2">
-          <fieldset>
+          <fieldset required>
             <label>Choose your Veggies: </label>
             <div>
-              <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+              <input type="checkbox" id="mushrooms" name="veggies" value="Mushroom">
               <label for="mushrooms">Mushrooms</label>
             </div>
             <div>
-              <input type="checkbox" id="tomatoes" name="topping" value="tomatoes">
+              <input type="checkbox" id="tomatoes" name="veggies" value="Tomato">
               <label for="tomatoes">Tomatoes</label>
             </div>
             <div>
-              <input type="checkbox" id="onions" name="topping" value="onions">
+              <input type="checkbox" id="onions" name="veggies" value="Onion">
               <label for="onions">Onions</label>
             </div>
             <div>
-              <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+              <input type="checkbox" id="pineapple" name="veggies" value="Pineapple">
               <label for="pineapple">Pineapple</label>
             </div>
             <div>
-              <input type="checkbox" id="garlic" name="topping" value="garlic">
+              <input type="checkbox" id="garlic" name="veggies" value="Garlic">
               <label for="garlic">Roasted Garlic</label>
             </div>
           </fieldset>
@@ -74,9 +74,9 @@
           <fieldset>
           <label>Choose a Size: </label><br>
           <select name="size" id="size">
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-            <option value="X-Large">Extra Large</option>
+            <option value="MED">Medium</option>
+            <option value="LG">Large</option>
+            <option value="XL">Extra Large</option>
           </select> <br>
           <button id="add-pizza" class="btn btn-danger text-white">Add Pizza</button>
         </fieldset>
