@@ -69,7 +69,10 @@ function displayPizzaDetails(pizzaToDisplay){
   var pizzaList = $("ul#pizzas");
   var htmlForPizzaInfo = "";
   pizzaToDisplay.pizzas.forEach(function(pizza){
-    htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + "</li>";
+    if(pizza.meats.length > 0 ){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ "Pizza" + "</li>";
+    }
+   
   });
   pizzaList.html(htmlForPizzaInfo);
 }
@@ -78,6 +81,7 @@ $(document).ready(function(){
   $("p#totalSentence").hide();
   $("button#add-pizza").click(function(){
     event.preventDefault();
+    $("p#totalSentence").hide();
     
     var size = $("select#size").val();
     var veggies = [];
@@ -96,6 +100,7 @@ $(document).ready(function(){
     displayPizzaDetails(shoppingCart);
     total.html(shoppingCart.calculateTotal());
     $("p#totalSentence").fadeIn();
+
     console.log(size);
     console.log(newPizza);
     console.log(shoppingCart);
