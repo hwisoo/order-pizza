@@ -41,11 +41,11 @@ ShoppingCart.prototype.calculateTotal = function() {
   var total =0;
   for(var i=0; i<this.pizzas.length; i++){
     if(this.pizzas[i]){
-      if(this.pizzas[i].size =="medium"){
+      if(this.pizzas[i].size =="Medium"){
         cost = 5;
-      } else if (this.pizzas[i].size =="large"){
+      } else if (this.pizzas[i].size =="Large"){
         cost = 7;
-      } else if (this.pizzas[i].size =="x-large"){
+      } else if (this.pizzas[i].size =="X-Large"){
         cost = 9;
       }
       total +=cost;
@@ -75,25 +75,31 @@ function displayPizzaDetails(pizzaToDisplay){
 }
 
 $(document).ready(function(){
+  $("p#totalSentence").hide();
   $("button#add-pizza").click(function(){
     event.preventDefault();
+    
     var size = $("select#size").val();
     var veggies = [];
     var meats = [];
+    
+    var total = $("span#total");
     $.each($("input[name='veggies']:checked"), function(){
       veggies.push($(this).val())
     });
     $.each($("input[name='meats']:checked"), function(){
       meats.push($(this).val())
     });
+    
     var newPizza = new Pizza(size, veggies, meats);
     shoppingCart.addPizza(newPizza);
     displayPizzaDetails(shoppingCart);
-
+    total.html(shoppingCart.calculateTotal());
+    $("p#totalSentence").fadeIn();
     console.log(size);
     console.log(newPizza);
     console.log(shoppingCart);
-    console.log(shoppingCart.calculateTotal());
+    console.log();
     
   })
 })
