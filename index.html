@@ -12,5 +12,44 @@
 </head>
 <body>
   <h1 class="bg-danger text-white text-center p-4">Order Pizza</h1>
+
+  <div class="container">
+    <form  id="order-input">
+    <legend>Choose a Size: </legend>
+    <select name="size" id="size">
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <option value="x-large">Extra Large</option>
+    </select>
+    <br>
+
+    <fieldset>
+      <legend>Choose your toppings: </legend>
+      <div>
+        <input type="checkbox" id="cheese" name="topping" value="cheese">
+        <label for="cheese">Cheese</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+      <div>
+        <input type="checkbox" id="tomatoes" name="topping" value="tomatoes">
+        <label for="tomatoes">Tomatoes</label>
+      </div>
+      <div>
+        <input type="checkbox" id="onions" name="topping" value="onions">
+        <label for="onions">Onions</label>
+      </div>
+      <div>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+      </div>
+    </fieldset>
+    </form>
+  </div>
+  <div id="shopping-cart" class="container">
+
+  </div>
 </body>
 </html>

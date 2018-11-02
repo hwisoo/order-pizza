@@ -28,13 +28,22 @@ ShoppingCart.prototype.findPizza = function(id){
 ShoppingCart.prototype.deletePizza = function(id) {
   for(var i=0; i<this.pizzas.length; i++){
     if(this.pizzas[i]){
-      if(this.contacts[i].id == id){
-        delete this.contacts[i];
+      if(this.pizzas[i].id == id){
+        delete this.pizzas[i];
         return true;
       }
     }
   };
   return false;
+}
+
+function Pizza(size, toppings) {
+  this.size = size,
+  this.toppings = []
+}
+
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
 }
 
 // Front-end Logic
