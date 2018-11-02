@@ -109,9 +109,10 @@ $(document).ready(function(){
     var newPizza = new Pizza(size, veggies, meats, extra);
     shoppingCart.addPizza(newPizza);
     displayPizzaDetails(shoppingCart);
-    total.html(shoppingCart.calculateTotal());
-    $("p#totalSentence").fadeIn(2000);
+    total.html("$"+ shoppingCart.calculateTotal());
+    $("p#totalSentence").fadeIn(1500);
     $("ul#pizzas").fadeIn();
+    $("#clear-button").show();
 
     console.log(size);
     console.log(newPizza);

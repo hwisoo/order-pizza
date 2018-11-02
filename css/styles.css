@@ -3,6 +3,11 @@ button#add-pizza {
   margin-bottom:20px;
 }
 
-img {
-  background-color: not defined;
+#clear-button {
+  display: none;
+}
+
+span#total {
+  color: #dc3545;
+  font-size: 70px;
 }
