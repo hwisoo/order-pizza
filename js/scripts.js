@@ -74,11 +74,21 @@ function displayPizzaDetails(pizzaToDisplay){
   pizzaToDisplay.pizzas.forEach(function(pizza){
     if(pizza.meats.length == 0 && pizza.veggies.length == 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + " Pizza, No Toppings" + "</li>";
-    } else if(pizza.meats.length > 0 && pizza.veggies.length == 0){
+    } else if(pizza.meats.length == 0 && pizza.veggies.length == 1){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.veggies[0]+ " Pizza" +`, ${pizza.veggies.length} Veggie` +"</li>";
+    } else if(pizza.meats.length == 1 && pizza.veggies.length == 0){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meat` +"</li>";
+    } else if(pizza.meats.length == 1 && pizza.veggies.length == 1){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meat` + `, ${pizza.veggies.length} Veggie` + "</li>"; 
+    } else if(pizza.meats.length == 1 && pizza.veggies.length > 1){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meats` +`, ${pizza.veggies.length} Veggies` + "</li>";
+    } else if(pizza.meats.length > 1 && pizza.veggies.length == 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meats` +"</li>";
-    } else if (pizza.veggies.length > 0 && pizza.meats.length == 0){
+    } else if(pizza.meats.length > 1 && pizza.veggies.length == 1){
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meats` +`, ${pizza.veggies.length} Veggie` + "</li>";
+    } else if (pizza.veggies.length > 1 && pizza.meats.length == 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.veggies[0]+ " Pizza" + `, ${pizza.veggies.length} Veggies` +"</li>";
-    } else if (pizza.veggies.length > 0 && pizza.meats.length > 0){
+    } else if (pizza.veggies.length > 1 && pizza.meats.length > 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " " +pizza.veggies[0]+ " Pizza" +`, ${pizza.meats.length} Meats` + `, ${pizza.veggies.length} Veggies` + "</li>";
     }
   });
