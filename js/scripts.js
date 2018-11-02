@@ -39,7 +39,7 @@ ShoppingCart.prototype.deletePizza = function(id) {
 
 function Pizza(size, toppings) {
   this.size = size,
-  this.toppings = []
+  this.toppings = toppings;
 }
 
 Pizza.prototype.addTopping = function(topping) {
@@ -47,3 +47,21 @@ Pizza.prototype.addTopping = function(topping) {
 }
 
 // Front-end Logic
+var shoppingCart = new ShoppingCart();
+$(document).ready(function(){
+  $("form#order-input").submit(function(){
+    event.preventDefault();
+    var size = $("select#size").val();
+    var toppings = [];
+    $.each($("input[name='topping']:checked"), function(){
+      toppings.push($(this).val())
+    });
+    var newPizza = new Pizza(size, toppings);
+
+    
+    console.log(size);
+    console.log(toppings);
+    console.log(newPizza);
+    
+  })
+})
