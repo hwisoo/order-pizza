@@ -73,7 +73,7 @@ function displayPizzaDetails(pizzaToDisplay){
   var htmlForPizzaInfo = "";
   pizzaToDisplay.pizzas.forEach(function(pizza){
     if(pizza.meats.length == 0 && pizza.veggies.length == 0){
-      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + " Pizza" + "</li>";
+      htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + " Pizza, No Toppings" + "</li>";
     } else if(pizza.meats.length > 0 && pizza.veggies.length == 0){
       htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size +" " + pizza.meats[0]+ " Pizza" +`, ${pizza.meats.length} Meats` +"</li>";
     } else if (pizza.veggies.length > 0 && pizza.meats.length == 0){
