@@ -99,10 +99,10 @@ $(document).ready(function(){
     var total = $("span#total");
     
     $.each($("input[name='veggies']:checked"), function(){
-      veggies.push($(this).val())
+      veggies.push($(this).val());
     });
     $.each($("input[name='meats']:checked"), function(){
-      meats.push($(this).val())
+      meats.push($(this).val());
     });
     var extra = meats.length*2 + veggies.length*1;
     
@@ -114,13 +114,13 @@ $(document).ready(function(){
     $("ul#pizzas").fadeIn();
     $("#clear-button").show();
 
-    console.log(size);
+    
     console.log(newPizza);
     console.log(shoppingCart);
-    console.log();
+   
     $("#clear-button").click(function(){
       location.reload();
-    })
+    });
     
-  })
-})
+  });
+});

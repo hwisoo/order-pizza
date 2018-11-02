@@ -6,7 +6,7 @@
 
 ## Description
 
-A simple web app, that takes user input and calculate the total price in the shopping cart using Javascript Object and Prototypes.
+A simple web app, that takes user input and calculate the total price in the shopping cart using Javascript Objects and Prototypes.
 
 
 ## Setup/Installation Requirements

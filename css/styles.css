@@ -4,6 +4,7 @@ button#add-pizza {
 }
 
 #clear-button {
+  margin-left:80px;
   display: none;
 }
 img#left{
@@ -12,12 +13,13 @@ img#left{
   border: 5px solid white;
 }
 
-label.choose, .pricing {
+label.choose, .pricing, #totalSentence {
   font-family: 'Pacifico', cursive;
   margin-top:20px;
 }
 
 ul#pizzas{
+  margin-left:55px;
   margin-top:20px;
   list-style-image: url('../img/favicon.jpg');
 }
@@ -28,5 +30,5 @@ h1 {
 
 span#total {
   color: #dc3545;
-  font-size: 70px;
+  font-size: 90px;
 }
