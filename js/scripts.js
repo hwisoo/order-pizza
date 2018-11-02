@@ -118,6 +118,9 @@ $(document).ready(function(){
     console.log(newPizza);
     console.log(shoppingCart);
     console.log();
+    $("#clear-button").click(function(){
+      location.reload();
+    })
     
   })
 })
