@@ -14,43 +14,82 @@
   <h1 class="bg-danger text-white text-center p-4">Order Pizza</h1>
 
   <div class="container">
-    <form id="order-input">
-    <legend>Choose a Size: </legend>
-    <select name="size" id="size">
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-      <option value="x-large">Extra Large</option>
-    </select>
-    <br>
+    
+    <div class="row">
+          <div class="col">
+          <fieldset>
+            <label>Choose your Veggies: </label>
+            <div>
+              <input type="checkbox" id="cheese" name="topping" value="cheese">
+              <label for="cheese">Cheese</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+              <label for="mushrooms">Mushrooms</label>
+            </div>
+            <div>
+              <input type="checkbox" id="tomatoes" name="topping" value="tomatoes">
+              <label for="tomatoes">Tomatoes</label>
+            </div>
+            <div>
+              <input type="checkbox" id="onions" name="topping" value="onions">
+              <label for="onions">Onions</label>
+            </div>
+            <div>
+              <input type="checkbox" id="sausage" name="topping" value="sausage">
+              <label for="sausage">Sausage</label>
+            </div>
+          </fieldset>
+        </div>
 
-    <fieldset>
-      <legend>Choose your toppings: </legend>
-      <div>
-        <input type="checkbox" id="cheese" name="topping" value="cheese">
-        <label for="cheese">Cheese</label>
-      </div>
-      <div>
-        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
-        <label for="mushrooms">Mushrooms</label>
-      </div>
-      <div>
-        <input type="checkbox" id="tomatoes" name="topping" value="tomatoes">
-        <label for="tomatoes">Tomatoes</label>
-      </div>
-      <div>
-        <input type="checkbox" id="onions" name="topping" value="onions">
-        <label for="onions">Onions</label>
-      </div>
-      <div>
-        <input type="checkbox" id="sausage" name="topping" value="sausage">
-        <label for="sausage">Sausage</label>
-      </div>
-    </fieldset>
-    <button type="submit" class="bg-danger text-white">Add Pizza</button>
-    </form>
+     
+          <div class="col">
+            <fieldset>
+                <label>Choose your Meats: </label>
+                <div>
+                  <input type="checkbox" id="olives" name="meats" value="olives">
+                  <label for="olives">Olives</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="mushrooms" name="meats" value="mushrooms">
+                  <label for="mushrooms">Mushrooms</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="tomatoes" name="meats" value="tomatoes">
+                  <label for="tomatoes">Tomatoes</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="onions" name="meats" value="onions">
+                  <label for="onions">Onions</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="green-peppers" name="meats" value="green-peppers">
+                  <label for="green-peppers">Green Peppers</label>
+                </div>
+              </fieldset>
+            </div>
+          <div class="col">
+          <fieldset>
+          <label>Choose a Size: </label><br>
+          <select name="size" id="size">
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-large">Extra Large</option>
+          </select> <br>
+          <button id="add-pizza" class="btn btn-danger text-white">Add Pizza</button>
+        </fieldset>
+      </div>  
+      
+  
+ 
+    
+ 
+ 
+  <div id="shopping-cart" class="row">
+    <ul id="pizzas">
+      
+    </ul>
   </div>
-  <div id="shopping-cart" class="container">
-
-  </div>
+</div>
 </body>
 </html>

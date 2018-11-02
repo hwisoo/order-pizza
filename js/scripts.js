@@ -37,31 +37,63 @@ ShoppingCart.prototype.deletePizza = function(id) {
   return false;
 }
 
-function Pizza(size, toppings) {
-  this.size = size,
-  this.toppings = toppings;
+ShoppingCart.prototype.calculateTotal = function() {
+  var total =0;
+  for(var i=0; i<this.pizzas.length; i++){
+    if(this.pizzas[i]){
+      if(this.pizzas[i].size =="medium"){
+        cost = 5;
+      } else if (this.pizzas[i].size =="large"){
+        cost = 7;
+      } else if (this.pizzas[i].size =="x-large"){
+        cost = 9;
+      }
+      total +=cost;
+    }
+    
+  }
+  return total;
 }
 
-Pizza.prototype.addTopping = function(topping) {
-  this.toppings.push(topping);
+function Pizza(size, veggies, meats) {
+  this.size = size,
+  this.veggies = veggies,
+  this.meats = meats
 }
+
 
 // Front-end Logic
 var shoppingCart = new ShoppingCart();
+
+function displayPizzaDetails(pizzaToDisplay){
+  var pizzaList = $("ul#pizzas");
+  var htmlForPizzaInfo = "";
+  pizzaToDisplay.pizzas.forEach(function(pizza){
+    htmlForPizzaInfo += "<li id=" + pizza.id + ">" + pizza.size + "</li>";
+  });
+  pizzaList.html(htmlForPizzaInfo);
+}
+
 $(document).ready(function(){
-  $("form#order-input").submit(function(){
+  $("button#add-pizza").click(function(){
     event.preventDefault();
     var size = $("select#size").val();
-    var toppings = [];
-    $.each($("input[name='topping']:checked"), function(){
-      toppings.push($(this).val())
+    var veggies = [];
+    var meats = [];
+    $.each($("input[name='veggies']:checked"), function(){
+      veggies.push($(this).val())
     });
-    var newPizza = new Pizza(size, toppings);
+    $.each($("input[name='meats']:checked"), function(){
+      meats.push($(this).val())
+    });
+    var newPizza = new Pizza(size, veggies, meats);
+    shoppingCart.addPizza(newPizza);
+    displayPizzaDetails(shoppingCart);
 
-    
     console.log(size);
-    console.log(toppings);
     console.log(newPizza);
+    console.log(shoppingCart);
+    console.log(shoppingCart.calculateTotal());
     
   })
 })
