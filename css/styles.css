@@ -7,6 +7,10 @@ button#add-pizza {
   display: none;
 }
 
+ul#pizzas{
+  list-style-image: url('../img/favicon.jpg');
+}
+
 span#total {
   color: #dc3545;
   font-size: 70px;
