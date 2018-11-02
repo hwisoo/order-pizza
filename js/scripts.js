@@ -90,6 +90,7 @@ $(document).ready(function(){
   $("button#add-pizza").click(function(){
     event.preventDefault();
     $("p#totalSentence").hide();
+    $("ul#pizzas").hide();
     
     var size = $("select#size").val();
     var veggies = [];
@@ -109,7 +110,8 @@ $(document).ready(function(){
     shoppingCart.addPizza(newPizza);
     displayPizzaDetails(shoppingCart);
     total.html(shoppingCart.calculateTotal());
-    $("p#totalSentence").fadeIn();
+    $("p#totalSentence").fadeIn(2000);
+    $("ul#pizzas").fadeIn();
 
     console.log(size);
     console.log(newPizza);
