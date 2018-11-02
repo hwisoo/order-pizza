@@ -14,12 +14,11 @@ img#left{
 
 label.choose, .pricing {
   font-family: 'Pacifico', cursive;
-}
-
-.pricing {
   margin-top:20px;
 }
+
 ul#pizzas{
+  margin-top:20px;
   list-style-image: url('../img/favicon.jpg');
 }
 
