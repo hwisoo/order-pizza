@@ -6,9 +6,22 @@ button#add-pizza {
 #clear-button {
   display: none;
 }
+img#left{
+  border-radius: 50%;
+  margin-right: 30px;
+  border: 5px solid white;
+}
+
+label.choose {
+  font-family: 'Pacifico', cursive;
+}
 
 ul#pizzas{
   list-style-image: url('../img/favicon.jpg');
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
 }
 
 span#total {
