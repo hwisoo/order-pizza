@@ -8,6 +8,13 @@
 
 A simple web app, that takes user input and calculate the total price in the shopping cart using Javascript Objects and Prototypes.
 
+## Specifications
+  * Program takes orders with no toppings and display them as a list item and outputs total
+    - Example Input : LG pizza
+    - Example Output : ["LG Pizza, No Toppings"]
+  * Program counts number of meats and veggies and display them as a list item and outputs total
+    - Example Input : Pepperoni, Mushrooms, Tomatoes, Lg Pizza
+    - Example Output : ["LG Pepperoni Pizza, 1 Meat, 2 Veggies"]
 
 ## Setup/Installation Requirements
 
