@@ -32,3 +32,8 @@ span#total {
   color: #dc3545;
   font-size: 90px;
 }
+
+#main {
+  width: 60%;
+  margin: auto;
+}

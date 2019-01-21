@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,15 @@
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/main.js"></script>
   <title>Order Pizza</title>
 </head>
+
 <body>
   <header>
-      <h1 class="bg-danger text-white text-center p-4"><img id="left" src="img/john.jpg" alt="pizza">Papa John's Pizza<img src="img/pizza.jpg" alt="pizza"></h1> 
+    <h1 class="bg-danger text-white text-center p-4">Papa John's Pizza<img src="img/pizza.jpg" alt="pizza"></h1>
   </header>
-  <div class="container">
+  <div class="container" id="main">
     <div class="row">
       <div class="col col-md-2">
         <fieldset>
@@ -86,14 +89,15 @@
           <button id="add-pizza" class="btn btn-danger text-white">Add Pizza</button>
         </fieldset>
         <p id="totalSentence">Your total is : <span id="total"></span></p>
-      </div>  
-       
+      </div>
+
       <div id="shopping-cart">
         <ul id="pizzas">
         </ul>
         <button id="clear-button" class="btn btn-danger">Clear All</button>
-      </div> 
+      </div>
     </div>
   </div>
 </body>
+
 </html>
